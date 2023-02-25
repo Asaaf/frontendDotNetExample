@@ -16,6 +16,9 @@ import { MainComponent } from './components/main/main.component';
   imports: [
     CommonModule,
     HomeRoutingModule
+  ],
+  bootstrap:[
+    MainComponent
   ]
 })
 export class HomeModule { }

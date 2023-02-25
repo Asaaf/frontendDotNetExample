@@ -1,0 +1,5 @@
+export const environment = {
+    production: false,
+    url_api: "http://localhost:1337/api",
+    app_token: "5d3f7150e3c899629fd74fb1fb23838be17772fa392a38f5b5ca5178dc5103bc555a80d11f390bfacc7454f495198036e1126ac4d507fcf9a8c4ded57b9b80dec08fc340d4a97d810cb871601160daf723a8b65f0160be9a19d3efed73506f4482188215f69e1e96b965997830721f0e95dd0e2a434fb49934fe83fb8a3c56c6"
+}

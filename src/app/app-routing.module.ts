@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path:'', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)},
-  //{path:'/noticias', loadChildren: ()=> import('./modules/news/news.module').then(m=> m.NewsModule)}
+  {path:'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)},
+  {path:'login', loadChildren: ()=> import('./modules/auth/auth.module').then(m=> m.AuthModule)}
 ];
 
 @NgModule({

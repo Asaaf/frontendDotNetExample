@@ -1,0 +1,46 @@
+.menu {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: var(--color5);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px 0px;
+}
+
+.menu ul {
+    display: flex;
+    margin: 0;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 15px;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 0px 12px;
+}
+
+.menu ul li a {
+    font-family: var(--primaryFont);
+    transition: all 0.15s linear;
+    color: var(--color3);
+}
+
+.menu ul li a:hover {
+    color: var(--color1);
+}
+
+.logo {
+    display: flex;
+    width: 150px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo img {
+    width: 90px;
+    display: flex;
+}

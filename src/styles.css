@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-:root{
+:root {
     --color1: #fff;
     --color2: #c6c6c6;
     --color3: #7A2219;
@@ -9,4 +9,10 @@
 
     --primaryFont: "Raleway";
     --secondaryFont: "Montserrat";
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }

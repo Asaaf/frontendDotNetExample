@@ -1,0 +1,16 @@
+<form method="post" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="input-container">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" formControlName="email" [(ngModel)]="user.email">
+        <div class="error-message" *ngIf="email?.errors?.['required'] && (email?.dirty || email?.touched)">Este es un campo requerido</div>
+        <div class="error-message" *ngIf="email?.errors?.['email'] && (email?.dirty || email?.touched)">Este correo no es válido</div>
+
+    </div>
+    <div class="input-container">
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" formControlName="pass" [(ngModel)]="user.pass">
+        <div class="error-message" *ngIf="pass?.errors?.['required'] && (pass?.dirty || pass?.touched)">Este es un campo requerido</div>
+
+    </div>
+    <input type="submit" value="Iniciar" class="btn-primary">
+</form>
