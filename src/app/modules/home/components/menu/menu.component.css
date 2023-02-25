@@ -44,3 +44,14 @@
     width: 90px;
     display: flex;
 }
+
+button.btn-primary{
+    border: none;
+    background: var(--color1);
+    padding: 3px 6px;
+    font-family: var(--primaryFont);
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}

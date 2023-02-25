@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/users/user/user';
 import { environment } from 'src/environments/environment';
 import { StorageService } from '../storage/storage.service';
@@ -10,7 +11,7 @@ import { StorageService } from '../storage/storage.service';
 export class AuthService {
   userToken: string | null;
 
-  constructor(private http: HttpClient, private storageService: StorageService) {
+  constructor(private http: HttpClient, private storageService: StorageService, private router: Router) {
     this.userToken = storageService.getItem('token');
     storageService.watchStorage().subscribe(
       resp => {
@@ -30,6 +31,7 @@ export class AuthService {
     this.http.post<any>(url, body, { headers: headersContent }).subscribe({
       next: (resp) => {
         this.storageService.setItem("userToken",resp.jwt);
+        this.router.navigate(['/home']);
       },
       error: (resp) => {
         console.log(resp);
