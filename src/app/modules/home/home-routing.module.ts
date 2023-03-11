@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from 'src/app/guards/auth.guard';
+import { GalleryComponent } from './components/gallery/gallery.component';
 import { MainComponent } from './components/main/main.component';
 
 const routes: Routes = [
   {
-    path: '', 
+    path: '',
     component: MainComponent,
     canActivate: [AuthGuard],
-    children:[]
+    children: [
+      { path: 'gallery', component: GalleryComponent }
+    ]
   }
 ];
 

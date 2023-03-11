@@ -1,0 +1,11 @@
+<div class="slider-container">
+    <ng-container *ngIf="images">
+        <div class="image-container" *ngFor="let image of images">
+            <img [src]="image.url" alt="{{image.alt}}" (getImageDimension)="detectDimension($event, image)">
+            <div class="description">
+                Descripción: {{image.description}}<br>
+                Formato: {{image.format}}
+            </div>
+        </div>
+    </ng-container>
+</div>
